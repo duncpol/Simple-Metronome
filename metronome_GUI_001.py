@@ -110,14 +110,8 @@ def tick_threaded(enabled):
     if more_than_2_threads():
         # print(threading.get_ident())
         threading.enumerate()[1].join()
-
-    # print(thread.getName())
-    # print(thread.name)
-
+        
     print(threading.enumerate())
-    # if tick_stopped:
-    # threading.Event().set()
-
 
 def exit_tick_threaded():
     if len(threading.enumerate()) > 1:
